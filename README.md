@@ -144,6 +144,8 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
  - **NCORES** (optional): Number of cores used for parallel computation. Default is 1. Parallel is used on chromosomes in the script PRS-epr.R, and used on plink for PRS calculation in the script tuning_testing.R. So the suggested value is 22 for script PRS-epr.R, and as many cores as possible for tuning_testing.R. 
 
+ - **cleanup** (optional): Cleanup all temporary files saved in a `tmp` folder, including PRS scores of tuning and testing samples, and all solutions from PRS-epr separated by chromosomes. Default is TRUE.
+
 
 ## Output
 
