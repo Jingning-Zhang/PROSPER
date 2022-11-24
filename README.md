@@ -82,7 +82,7 @@ Note that the summary statistics files are suggested to be cleaned as follows be
     delta0    lambda0
     49.8      0.002
 ```
-The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used [a simplifier version of lassosum2]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "lassosum2") written in command line using the same data structure as PRS-epr. If you have not run the official lassosum2, we suggests using the simplifier version instead. It is faster, requires less computation resource, and has a direct output for `lassosum_param`.
+The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used [a simplifier version of lassosum2]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "lassosum2") written in command line using the same data structure as PRS-epr. If you have not run the official lassosum2, we suggests using the **simplifier version** instead. It is faster, requires less computation resource, and has a direct output for `lassosum_param`.
 
  - **chrom** (optional): The chromosome on which the model is fitted, separated by comma or dash for consecutive chromosomes. Default is 1-22.
 
