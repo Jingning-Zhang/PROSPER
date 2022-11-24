@@ -160,11 +160,11 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-    Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`.
+Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`.
 
-    Run the scripts as instructed below, and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PRS-epr_example_results.tar.gz` 
+Run the scripts as instructed below, and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PRS-epr_example_results.tar.gz` 
     
-    The files can be downloaded by the provided link, or the command `gdown <file_id>`.
+The files can be downloaded by the provided link, or the command `gdown <file_id>`.
      
 
 ```
