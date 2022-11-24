@@ -36,7 +36,7 @@ install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearn
 
 ## Using PRS-epr
 
-Scripts and input parameters:
+There are two scripts `PRS-epr.R` and `tuning_testing.R`. The first one is used to get solutions from all tuning parameters setting, and then the second one is used to perform tuning/testing and get the final ensembled PRS. The parameters are explained in this section. At the end of this README file, there is a section for toy example.
 
 `
 PRS-epr.R --PATH_package --PATH_out --FILE_sst --pop --lassosum_param --chrom --Ll --Lc --verbose --NCORES
