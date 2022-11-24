@@ -170,10 +170,10 @@ Rscript ${package}/scripts/tuning_testing.R \
 --PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
 --prefix ${target_pop} \
 --testing TRUE \
---bfile_tuning ${path_example}/sample_data/AFR/tuning_geno \
---pheno_tuning ${path_example}/sample_data/AFR/pheno.fam \
---bfile_testing ${path_example}/sample_data/AFR/testing_geno \
---pheno_testing ${path_example}/sample_data/AFR/pheno.fam \
+--bfile_tuning ${path_example}/sample_data/${target_pop}/tuning_geno \
+--pheno_tuning ${path_example}/sample_data/${target_pop}/pheno.fam \
+--bfile_testing ${path_example}/sample_data/${target_pop}/testing_geno \
+--pheno_testing ${path_example}/sample_data/${target_pop}/pheno.fam \
 --NCORES 50
 
 ```
