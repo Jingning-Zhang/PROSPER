@@ -147,18 +147,68 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
 ## Output
 
-The script `PRS-epr.R` creates a directory `${path_out}/before_ensemble/`, and writes two files `score_file.txt` and `score_param.txt` inside it.
+The script `PRS-epr.R` creates a directory `$PATH_out/before_ensemble/`, and writes two files `score_file.txt` and `score_param.txt` inside it.
 1. `score_file.txt` contains all solutions from PRS-epr
 2. `score_param.txt` contains their ancestry origin and corresponding tuning parameter settings
 
-The script `tuning_testing.R` creates a directory `${path_out}/after_ensemble_${prefix}/`, and writes three files `PRSepr_prs_file.txt`, `R2.txt`, and `superlearner_function.RData` inside it. 
+The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$prefix/`, and writes three files `PRSepr_prs_file.txt`, `R2.txt`, and `superlearner_function.RData` inside it. 
 1. **`PRSepr_prs_file.txt` is the final ensembled PRS solution from PRS-epr**
 2. **`R2.txt` is its R2 on tuning and testing samples (if `testing=TRUE`)**
-3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `${path_out}/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
+3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `$PATH_out/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
 
 ## Toy Example
 
 Please download [example data]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example data"). Run the scripts as instructed below, and you will get the example output same as [here]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example output"). 
+
+
+```
+
+directory = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
+target_pop = 'AFR'
+path_example = '/dcs04/nilanjan/data/jzhang2/example/'
+
+path_sumdata = '/dcs04/nilanjan/data/jzhang2/example/summdata'
+path_lassosum2 = '/dcs04/nilanjan/data/jzhang2/example/lassosum2'
+path_plink = '/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
+path_geno = '/dcs04/nilanjan/data/jzhang2/UKBB/genotype'
+path_pheno = '/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
+path_covar = '/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
+
+Rscript ${directory}/scripts/lassosum2.R \
+--PATH_package /dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/PRS-epr \
+--PATH_out ${path_example}/PRS-epr_example_results/lassosum2 \
+--PATH_plink ${path_plink} \
+--FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
+--pop EUR,AFR \
+--chrom 1-22 \
+--bfile_tuning ${path_example}/sample_data/EUR/tuning_geno,${path_example}/sample_data/AFR/tuning_geno \
+--pheno_tuning ${path_example}/sample_data/EUR/pheno.fam,${path_example}/sample_data/AFR/pheno.fam \
+--bfile_testing ${path_example}/sample_data/EUR/testing_geno,${path_example}/sample_data/AFR/testing_geno \
+--pheno_testing ${path_example}/sample_data/EUR/pheno.fam,${path_example}/sample_data/AFR/pheno.fam \
+--testing TRUE \
+--NCORES 22
+
+Rscript ${directory}/scripts/PRS-epr.R \
+--PATH_package /dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/PRS-epr \
+--PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
+--FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
+--pop EUR,AFR \
+--lassosum_param ${path_example}/PRS-epr_example_results/lassosum2/EUR/optimal_param.txt,${path_example}/PRS-epr_example_results/lassosum2/AFR/optimal_param.txt \
+--chrom 1-22 \
+--NCORES 22
+
+Rscript ${directory}/scripts/tuning_testing.R \
+--PATH_plink /dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2 \
+--PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
+--prefix AFR \
+--testing TRUE \
+--bfile_tuning ${path_example}/sample_data/AFR/tuning_geno \
+--pheno_tuning ${path_example}/sample_data/AFR/pheno.fam \
+--bfile_testing ${path_example}/sample_data/AFR/testing_geno \
+--pheno_testing ${path_example}/sample_data/AFR/pheno.fam \
+--NCORES 22
+
+```
 
 
 ## Support
