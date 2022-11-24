@@ -7,13 +7,13 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 
 ## Getting Started
 
-- Create a directory for storing PRS-epr package and its LD refernce panels. Denoted by `${directory}`.
+- Create a directory for storing PRS-epr package and its LD refernce panels. Denoted by `${package}`.
 
-- Download the scripts from `https://github.com/Jingning-Zhang/PRS-epr`, and saved in `${directory}` in a folder named **scripts**
+- Download the scripts from `https://github.com/Jingning-Zhang/PRS-epr`, and saved in `${package}` in a folder named **scripts**
 
-- Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"), and saved in `${directory}`
+- Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"), and saved in `${package}`
     
-- Download the LD reference panels and decompress files in `${directory}`:
+- Download the LD reference panels and decompress files in `${package}`:
    
      [AFR reference]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "AFR reference") (~12.1G); Google Drive <file_id>: `1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG`; Decompress by `tar -zxvf AFR.tar.gz`
      
@@ -39,7 +39,7 @@ install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearn
 An example of using PRS-epr in command line
 
 ```
-directory = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
+package = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
 target_pop = 'AFR'
 path_out = '/dcs04/nilanjan/data/jzhang2/example/PRS-epr'
 path_sumdata = '/dcs04/nilanjan/data/jzhang2/example/summdata'
@@ -50,8 +50,8 @@ path_pheno = '/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
 path_covar = '/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
 
 
-Rscript ${directory}/scripts/PRS-epr.R \
---PATH_package ${directory} \
+Rscript ${package}/scripts/PRS-epr.R \
+--PATH_package ${package} \
 --PATH_out ${path_out} \
 --FILE_sst ${path_sumdata}/EUR.txt,${path_sumdata}/AFR.txt,${path_sumdata}/AMR.txt \
 --pop EUR,AFR,AMR \
@@ -62,7 +62,7 @@ Rscript ${directory}/scripts/PRS-epr.R \
 --verbose 1 \
 --NCORES 22 
 
-Rscript ${directory}/scripts/tuning_testing.R \
+Rscript ${package}/scripts/tuning_testing.R \
 --PATH_plink ${path_plink} \
 --PATH_out ${path_out} \
 --prefix ${target_pop} \
@@ -162,20 +162,13 @@ Please download [example data]( https://github.com/Jingning-Zhang/PRS-epr/blob/m
 
 
 ```
-
-directory = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
-target_pop = 'AFR'
+package = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
 path_example = '/dcs04/nilanjan/data/jzhang2/example/'
-
-path_sumdata = '/dcs04/nilanjan/data/jzhang2/example/summdata'
-path_lassosum2 = '/dcs04/nilanjan/data/jzhang2/example/lassosum2'
 path_plink = '/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
-path_geno = '/dcs04/nilanjan/data/jzhang2/UKBB/genotype'
-path_pheno = '/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
-path_covar = '/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
+target_pop = 'AFR'
 
-Rscript ${directory}/scripts/lassosum2.R \
---PATH_package /dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/PRS-epr \
+Rscript ${package}/scripts/lassosum2.R \
+--PATH_package ${package} \
 --PATH_out ${path_example}/PRS-epr_example_results/lassosum2 \
 --PATH_plink ${path_plink} \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
@@ -188,8 +181,8 @@ Rscript ${directory}/scripts/lassosum2.R \
 --testing TRUE \
 --NCORES 22
 
-Rscript ${directory}/scripts/PRS-epr.R \
---PATH_package /dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/PRS-epr \
+Rscript ${package}/scripts/PRS-epr.R \
+--PATH_package ${package} \
 --PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
 --pop EUR,AFR \
@@ -197,16 +190,16 @@ Rscript ${directory}/scripts/PRS-epr.R \
 --chrom 1-22 \
 --NCORES 22
 
-Rscript ${directory}/scripts/tuning_testing.R \
---PATH_plink /dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2 \
+Rscript ${package}/scripts/tuning_testing.R \
+--PATH_plink ${path_plink} \
 --PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
---prefix AFR \
+--prefix ${target_pop} \
 --testing TRUE \
 --bfile_tuning ${path_example}/sample_data/AFR/tuning_geno \
 --pheno_tuning ${path_example}/sample_data/AFR/pheno.fam \
 --bfile_testing ${path_example}/sample_data/AFR/testing_geno \
 --pheno_testing ${path_example}/sample_data/AFR/pheno.fam \
---NCORES 22
+--NCORES 50
 
 ```
 
