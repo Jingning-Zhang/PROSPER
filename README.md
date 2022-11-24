@@ -43,7 +43,7 @@ PRS-epr.R --PATH_package --PATH_out --FILE_sst --pop --lassosum_param --chrom --
 `
 
 `
-tuning_testing.R --PATH_plink --PATH_out --prefix --testing --bfile_tuning --pheno_tuning --covar_tuning --bfile_testing --pheno_testing --covar_testing --NCORES
+tuning_testing.R --PATH_out --PATH_plink --prefix --SL_library --linear_score --bfile_tuning --pheno_tuning --covar_tuning --testing --bfile_testing --pheno_testing --covar_testing --verbose --cleanup --NCORES
 `
 
  - **PATH_package** (required): Full path to the directory mentioned above that contains: 1. a folder scripts downloaded from github 2. LD reference panels downloaded from Google Drive.
