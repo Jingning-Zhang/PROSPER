@@ -160,8 +160,7 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-Please download [example data]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example data"). Run the scripts as instructed below, and you will get the example output same as [here]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example output"). 
-
+Please download [example data]( https://drive.google.com/drive/folders/1dMeucypUqWUYt8JpnSOwCNNq7GHnwXML?usp=sharing "example data"). Run the scripts as instructed below, and you will get the example output same as [here]( https://drive.google.com/drive/folders/1r3zFONKq9KZci8k8ClrZNYuDxnx8GPol?usp=sharing "example output"). 
 
 ```
 package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
