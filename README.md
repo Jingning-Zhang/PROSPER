@@ -36,44 +36,34 @@ install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearn
 
 ## Using PRS-epr
 
-An example of using PRS-epr in command line
+Scripts and input parameters:
 
 ```
-package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
-target_pop='AFR'
-path_out='/dcs04/nilanjan/data/jzhang2/example/PRS-epr'
-path_sumdata='/dcs04/nilanjan/data/jzhang2/example/summdata'
-path_lassosum2='/dcs04/nilanjan/data/jzhang2/example/lassosum2'
-path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
-path_geno='/dcs04/nilanjan/data/jzhang2/UKBB/genotype'
-path_pheno='/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
-path_covar='/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
 
+PRS-epr.R
+--PATH_package
+--PATH_out
+--FILE_sst
+--pop
+--lassosum_param
+--chrom
+--Ll
+--Lc
+--verbose
+--NCORES
 
-Rscript ${package}/scripts/PRS-epr.R \
---PATH_package ${package} \
---PATH_out ${path_out} \
---FILE_sst ${path_sumdata}/EUR.txt,${path_sumdata}/AFR.txt,${path_sumdata}/AMR.txt \
---pop EUR,AFR,AMR \
---lassosum_param ${path_lassosum2}/EUR/optimal_param.txt,${path_lassosum2}/AFR/optimal_param.txt,${path_lassosum2}/AMR/optimal_param.txt \
---chrom 1-22 \
---Ll 10 \
---Lc 10 \
---verbose 1 \
---NCORES 22 
-
-Rscript ${package}/scripts/tuning_testing.R \
---PATH_plink ${path_plink} \
---PATH_out ${path_out} \
---prefix ${target_pop} \
---testing T \
---bfile_tuning ${path_geno}/${target_pop}/allchrom_tuning \
---pheno_tuning ${path_pheno}/${target_pop}/tuning.txt \
---covar_tuning ${path_covar}/${target_pop}/tuning.txt \
---bfile_testing ${path_geno}/${target_pop}/allchrom_testing \
---pheno_testing ${path_pheno}/${target_pop}/testing.txt \
---covar_testing ${path_covar}/${target_pop}/testing.txt \
---NCORES 50
+tuning_testing.R 
+--PATH_plink
+--PATH_out
+--prefix
+--testing
+--bfile_tuning
+--pheno_tuning
+--covar_tuning
+--bfile_testing
+--pheno_testing
+--covar_testing
+--NCORES
 ```
 
  - **PATH_package** (required): Full path to the directory mentioned above that contains: 1. a folder scripts downloaded from github 2. LD reference panels downloaded from Google Drive.
