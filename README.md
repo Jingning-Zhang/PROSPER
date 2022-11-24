@@ -39,15 +39,15 @@ install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearn
 An example of using PRS-epr in command line
 
 ```
-package = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
-target_pop = 'AFR'
-path_out = '/dcs04/nilanjan/data/jzhang2/example/PRS-epr'
-path_sumdata = '/dcs04/nilanjan/data/jzhang2/example/summdata'
-path_lassosum2 = '/dcs04/nilanjan/data/jzhang2/example/lassosum2'
-path_plink = '/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
-path_geno = '/dcs04/nilanjan/data/jzhang2/UKBB/genotype'
-path_pheno = '/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
-path_covar = '/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
+package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
+target_pop='AFR'
+path_out='/dcs04/nilanjan/data/jzhang2/example/PRS-epr'
+path_sumdata='/dcs04/nilanjan/data/jzhang2/example/summdata'
+path_lassosum2='/dcs04/nilanjan/data/jzhang2/example/lassosum2'
+path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
+path_geno='/dcs04/nilanjan/data/jzhang2/UKBB/genotype'
+path_pheno='/dcs04/nilanjan/data/jzhang2/UKBB/phenotype'
+path_covar='/dcs04/nilanjan/data/jzhang2/UKBB/covariate'
 
 
 Rscript ${package}/scripts/PRS-epr.R \
@@ -97,7 +97,7 @@ Required columns in the files:
   4. beta_se: Standard error of beta.
   5. a1: effective allele (counted allele in regression).
   6. a0: alternative allele (non-A1 allele).
-  7. n_eff: Sample size per variant. Note that for binary traits, it is `effective sample sizes = 4 / (1 / N_control + 1 / N_case)`; and for continuous traits, it is simply the sample size.
+  7. n_eff: Sample size per variant. Note that for binary traits, it is `effective sample sizes=4 / (1 / N_control + 1 / N_case)`; and for continuous traits, it is simply the sample size.
 
 Note that the summary statistics files are suggested to be cleaned as follows before using:
   1. Keep variants in reference panels to avoid troubles caused by reading huge files. The rsid of variants in reference panels can be found in `ref_bim.txt`.
@@ -164,10 +164,10 @@ Please download [example data]( https://github.com/Jingning-Zhang/PRS-epr/blob/m
 
 
 ```
-package = '/dcs04/nilanjan/data/jzhang2/PRS-epr'
-path_example = '/dcs04/nilanjan/data/jzhang2/example/'
-path_plink = '/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
-target_pop = 'AFR'
+package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
+path_example='/dcs04/nilanjan/data/jzhang2/example/'
+path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
+target_pop='AFR'
 
 Rscript ${package}/scripts/lassosum2.R \
 --PATH_package ${package} \
