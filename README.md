@@ -147,6 +147,10 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
 ## Output
 
+The script `PRS-epr.R` creates a directory `${path_out}/before_ensemble/` inside the specified output path, and writes two files `score_file.txt` and `score_param.txt` inside it. `score_file.txt` contains all solutions from PRS-epr, and `score_param.txt` contains their ancestry origin and corresponding tuning parameter settings.
+
+The script `tuning_testing.R` creates a directory `${path_out}/after_ensemble_${prefix}/` inside the specified output path, and writes three files `PRSepr_prs_file.txt`, `R2.txt`, and `superlearner_function.RData` inside it. `PRSepr_prs_file.txt` is the final ensembled PRS solution from PRS-epr, `R2.txt` is its R2 on tuning and testing samples (if `testing=TRUE`), and `superlearner_function.RData` contains two variable `sl` (super learner model) and `score_drop` (scores in the `${path_out}/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`).  
+
 
 ## Support
 
