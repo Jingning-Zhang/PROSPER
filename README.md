@@ -122,7 +122,7 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
  - **prefix** (required): Output filename prefix. Suggested value is name of target population. 
 
- - **bfile_tuning** (required): Full path to PLINK binary input file prefix (minus bed/bim/fam) for tuning.
+ - **bfile_tuning** (required): Full path to PLINK binary input file prefix (minus bed/bim/fam) for tuning. We suggest using at least 1000 samples for tuning.
 
  - **pheno_tuning** (optional): Full path to phenotype file for tuning (PLINK format). This is optional, taken from `bfile_tuning` otherwise.
 
