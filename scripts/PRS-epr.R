@@ -361,4 +361,3 @@ fwrite2(param, paste0(opt$PATH_out,"/before_ensemble/score_param.txt"), col.name
 if ( opt$verbose >= 1 ) cat(paste0("PRSs in all tuning parameter settings are saved in ", opt$PATH_out,"/before_ensemble/score_file.txt \n"))
 if ( opt$verbose >= 1 ) cat(paste0("Their corresponding tuning parameter settings are saved in ", opt$PATH_out,"/before_ensemble/score_param.txt \n"))
 
-
