@@ -156,6 +156,10 @@ The script `tuning_testing.R` creates a directory `${path_out}/after_ensemble_${
 2. **`R2.txt` is its R2 on tuning and testing samples (if `testing=TRUE`)**
 3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `${path_out}/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
 
+## Toy Example
+
+Please download [example data]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example data"). Run the scripts as instructed below, and you will get the example output same as [here]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "example output"). 
+
 
 ## Support
 
