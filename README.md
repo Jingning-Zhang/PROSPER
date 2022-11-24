@@ -25,7 +25,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
      
      [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; Decompress by `tar -zxvf SAS.tar.gz`
      
-     To fast download files from Google Drive, install **gdown** and use the command `gdown <file_id>` . **gdown** can be installed using `pip install gdown`.
+     The files can be downloaded by the provided link. Besides, **gdown** can fast download files from Google Drive to linux by using the command `gdown <file_id>`. **gdown** can be installed using `pip install gdown`.
      
      The LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes. 
      
@@ -160,7 +160,12 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-Please download [example data]( https://drive.google.com/drive/folders/1dMeucypUqWUYt8JpnSOwCNNq7GHnwXML?usp=sharing "example data"). Run the scripts as instructed below, and you will get the example output same as [here]( https://drive.google.com/drive/folders/1r3zFONKq9KZci8k8ClrZNYuDxnx8GPol?usp=sharing "example output"). 
+    Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`.
+
+    Run the scripts as instructed below, and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PRS-epr_example_results.tar.gz` 
+    
+    The files can be downloaded by the provided link, or the command `gdown <file_id>`.
+     
 
 ```
 package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
