@@ -67,7 +67,7 @@ Required columns in the files:
   4. beta_se: Standard error of beta.
   5. a1: effective allele (counted allele in regression).
   6. a0: alternative allele (non-A1 allele).
-  7. n_eff: Sample size per variant. Note that for binary traits, it is `effective sample sizes=4 / (1 / N_control + 1 / N_case)`; and for continuous traits, it is simply the sample size.
+  7. n_eff: Sample size per variant. Note that for binary traits, it is `effective sample sizes = 4 / (1 / N_control + 1 / N_case)`; and for continuous traits, it is simply the sample size.
 
 Note that the summary statistics files are suggested to be cleaned as follows before using:
   1. Keep variants in reference panels to avoid troubles caused by reading huge files. The rsid of variants in reference panels can be found in `ref_bim.txt`.
