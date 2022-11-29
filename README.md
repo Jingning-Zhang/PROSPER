@@ -178,7 +178,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 ```
 
-As a reference, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core) to finish running lassosum2 and then PRS-epr using the above codes; for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
+As a reference, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core) to run PRS-epr using the above codes; for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
 
 ## Support
