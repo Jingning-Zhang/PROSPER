@@ -154,7 +154,7 @@ Rscript ${package}/scripts/lassosum2.R \
 --bfile_testing ${path_example}/sample_data/EUR/testing_geno,${path_example}/sample_data/AFR/testing_geno \
 --pheno_testing ${path_example}/sample_data/EUR/pheno.fam,${path_example}/sample_data/AFR/pheno.fam \
 --testing TRUE \
---NCORES 22
+--NCORES 5
 
 Rscript ${package}/scripts/PRS-epr.R \
 --PATH_package ${package} \
@@ -163,7 +163,7 @@ Rscript ${package}/scripts/PRS-epr.R \
 --pop EUR,AFR \
 --lassosum_param ${path_example}/PRS-epr_example_results/lassosum2/EUR/optimal_param.txt,${path_example}/PRS-epr_example_results/lassosum2/AFR/optimal_param.txt \
 --chrom 1-22 \
---NCORES 22
+--NCORES 5
 
 Rscript ${package}/scripts/tuning_testing.R \
 --PATH_plink ${path_plink} \
@@ -174,7 +174,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 --pheno_tuning ${path_example}/sample_data/${target_pop}/pheno.fam \
 --bfile_testing ${path_example}/sample_data/${target_pop}/testing_geno \
 --pheno_testing ${path_example}/sample_data/${target_pop}/pheno.fam \
---NCORES 50
+--NCORES 5
 
 ```
 
