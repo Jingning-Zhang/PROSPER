@@ -10,6 +10,8 @@ suppressMessages(library("inline"))
 
 suppressMessages(library("doMC"))
 suppressMessages(library("foreach"))
+
+## progress bar function from https://stackoverflow.com/questions/51213293/is-it-possible-to-get-a-progress-bar-with-foreach-and-a-multicore-kind-of-back
 progBar <- function(ii, N, per = 10) {
   #ii is current iteration.
   #N is total number of iterations to perform.
