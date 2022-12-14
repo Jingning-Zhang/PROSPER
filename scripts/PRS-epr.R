@@ -83,7 +83,7 @@ suppressWarnings(dir.create(paste0(opt$PATH_out, "/tmp")))
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/tmp/PRS_in_all_settings_bychrom")))
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/before_ensemble")))
 
-sourceCpp(paste0(opt$PATH_package,"/scripts/PRS-epr.cpp"))
+sourceCpp(paste0(opt$PATH_package,"/scripts/PROSPER.cpp"))
 
 
 ########################################################################
