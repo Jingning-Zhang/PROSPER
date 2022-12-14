@@ -181,10 +181,10 @@ save(sl, score_drop, file = paste0(opt$PATH_out,"/after_ensemble_",opt$prefix,"/
 
 if ( opt$verbose >= 1 ) cat(paste0("Superlearner model of ensemble PRS is saved in ", opt$PATH_out,"/after_ensemble_",opt$prefix,"/superlearner_function.RData \n"))
 
-# Predictions of ensembled scores from PRS-epr on tuning samples
+# Predictions of ensembled scores from PROSPER on tuning samples
 after_ensemble_tuning <- cbind(pheno[,1:2], ensemble_score = predict(sl, SCORE, onlySL = TRUE)[[1]])
 fwrite2(after_ensemble_tuning, paste0(opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_tuning.txt"), col.names = T, sep="\t", nThread=NCORES)
-if ( opt$verbose == 2 ) cat(paste0("Predicted PRS-epr scores for tuning samples is saved in ", opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_tuning.txt \n"))
+if ( opt$verbose == 2 ) cat(paste0("Predicted PROSPER scores for tuning samples is saved in ", opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_tuning.txt \n"))
 
 # Get tuning R2
 fit <- lm(pheno[,3]~after_ensemble_tuning$ensemble_score)
@@ -211,9 +211,9 @@ if(opt$linear_score){
   ensemble_score <- data.frame(score[,1:3], weight = as.matrix(score[,-(1:3)]) %*% matrix(coef, ncol=1))
   ensemble_score <- ensemble_score[ensemble_score$weight!=0,]
 
-  fwrite2(ensemble_score, paste0(opt$PATH_out,"/after_ensemble_",opt$prefix,"/PRSepr_prs_file.txt"), col.names = T, sep="\t", nThread=NCORES)
+  fwrite2(ensemble_score, paste0(opt$PATH_out,"/after_ensemble_",opt$prefix,"/PROSPER_prs_file.txt"), col.names = T, sep="\t", nThread=NCORES)
 
-  if ( opt$verbose >= 1 ) cat(paste0("Ensembled PRS-epr model is saved in ", opt$PATH_out,"/after_ensemble_",opt$prefix,"/PRSepr_prs_file.txt \n"))
+  if ( opt$verbose >= 1 ) cat(paste0("Ensembled PROSPER model is saved in ", opt$PATH_out,"/after_ensemble_",opt$prefix,"/PROSPER_prs_file.txt \n"))
 
   rm(list=c("score","ensemble_score","coef","tmp"))
 
@@ -288,10 +288,10 @@ if(opt$testing){
 
   if(length(score_drop)>0){ SCORE <- SCORE[,-score_drop,drop=F] }
 
-  # Predictions of ensembled scores from PRS-epr on testing samples
+  # Predictions of ensembled scores from PROSPER on testing samples
   after_ensemble_testing <- cbind(pheno[,1:2], ensemble_score = predict(sl, SCORE, onlySL = TRUE)[[1]])
   fwrite2(after_ensemble_testing, paste0(opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_testing.txt"), col.names = T, sep="\t", nThread=NCORES)
-  if ( opt$verbose == 2 ) cat(paste0("Predicted PRS-epr scores for testing samples is saved in ", opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_testing.txt \n"))
+  if ( opt$verbose == 2 ) cat(paste0("Predicted PROSPER scores for testing samples is saved in ", opt$PATH_out,"/tmp/sample_scores_",opt$prefix,"/after_ensemble_testing.txt \n"))
 
   # Get testing R2
   fit <- lm(pheno[,3]~after_ensemble_testing$ensemble_score)
