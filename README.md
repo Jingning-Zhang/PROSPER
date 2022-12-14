@@ -130,7 +130,7 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (changing the direcotries), and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
+Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (direcotries are needed t obe changed), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; Decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
     
 The files can be downloaded by the provided link, or the command `gdown <file_id>`.
 
