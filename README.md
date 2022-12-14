@@ -1,15 +1,15 @@
-# PRS-epr
+# PROSPER
 
-**PRS-epr** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
+**PROSPER** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
 
 Preprint manuscript will be put online very soon. Please contact Jingning Zhang (jzhan218@jhu.edu) for citation.
 
 
 ## Getting Started
 
-- Create a directory for storing PRS-epr package and its LD refernce panels. Denoted by `${package}`.
+- Create a directory for storing PROSPER package and its LD refernce panels. Denoted by `${package}`.
 
-- Download the scripts from `https://github.com/Jingning-Zhang/PRS-epr`, and saved in `${package}` in a folder named **scripts**
+- Download the scripts from `https://github.com/Jingning-Zhang/PROSPER`, and saved in `${package}` in a folder named **scripts**
 
 - Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"), and saved in `${package}`
     
@@ -34,12 +34,12 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
 
-## Using PRS-epr
+## Using PROSPER
 
-There are two scripts `PRS-epr.R` and `tuning_testing.R`. The first one is used to get solutions from all tuning parameters setting, and then the second one is used to perform tuning/testing and get the final ensembled PRS. The parameters are explained in this section. At the end of this README file, there is a toy example, including example codes and results.
+There are two scripts `PROSPER.R` and `tuning_testing.R`. The first one is used to get solutions from all tuning parameters setting, and then the second one is used to perform tuning/testing and get the final ensembled PRS. The parameters are explained in this section. At the end of this README file, there is a toy example, including example codes and results.
 
 `
-PRS-epr.R --PATH_package --PATH_out --FILE_sst --pop --lassosum_param --chrom --Ll --Lc --verbose --NCORES
+PROSPER.R --PATH_package --PATH_out --FILE_sst --pop --lassosum_param --chrom --Ll --Lc --verbose --NCORES
 `
 
 `
@@ -82,7 +82,7 @@ Note that the summary statistics files are suggested to be cleaned as follows be
     delta0    lambda0
     49.8      0.002
 ```
-The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used [a simplifier version of lassosum2]( https://github.com/Jingning-Zhang/PRS-epr/blob/main/lassosum2.md "lassosum2") written in command line using the same data structure as PRS-epr. If you have not run the official lassosum2, we suggests using the **simplifier version** instead. It is faster, requires less computation resource, and has a direct output for `lassosum_param`.
+The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used [a simplifier version of lassosum2]( https://github.com/Jingning-Zhang/PROSPER/blob/main/lassosum2.md "lassosum2") written in command line using the same data structure as PROSPER. If you have not run the official lassosum2, we suggests using the **simplifier version** instead. It is faster, requires less computation resource, and has a direct output for `lassosum_param`.
 
  - **chrom** (optional): The chromosome on which the model is fitted, separated by comma or dash for consecutive chromosomes. Default is 1-22.
 
@@ -112,39 +112,39 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
  - **verbose** (optional): How much chatter to print: 0=nothing; 1=minimal; 2=all. Default is 1.
 
- - **NCORES** (optional): Number of cores used for parallel computation. Default is 1. Parallel is used on chromosomes in the script PRS-epr.R, and used on plink for PRS calculation in the script tuning_testing.R. So the suggested value is 22 for script PRS-epr.R, and as many cores as possible for tuning_testing.R. 
+ - **NCORES** (optional): Number of cores used for parallel computation. Default is 1. Parallel is used on chromosomes in the script PROSPER.R, and used on plink for PRS calculation in the script tuning_testing.R. So the suggested value is 22 for script PROSPER.R, and as many cores as possible for tuning_testing.R. 
 
- - **cleanup** (optional): Cleanup all temporary files saved in a `tmp` folder, including PRS scores of tuning and testing samples, and all solutions from PRS-epr separated by chromosomes. Default is TRUE.
+ - **cleanup** (optional): Cleanup all temporary files saved in a `tmp` folder, including PRS scores of tuning and testing samples, and all solutions from PROSPER separated by chromosomes. Default is TRUE.
 
 
 ## Output
 
-The script `PRS-epr.R` creates a directory `$PATH_out/before_ensemble/`, and writes two files `score_file.txt` and `score_param.txt` inside it.
-1. `score_file.txt` contains all solutions from PRS-epr
+The script `PROSPER.R` creates a directory `$PATH_out/before_ensemble/`, and writes two files `score_file.txt` and `score_param.txt` inside it.
+1. `score_file.txt` contains all solutions from PROSPER
 2. `score_param.txt` contains their ancestry origin and corresponding tuning parameter settings
 
 The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$prefix/`, and writes three files `PRSepr_prs_file.txt`, `R2.txt`, and `superlearner_function.RData` inside it. 
-1. **`PRSepr_prs_file.txt` is the final ensembled PRS solution from PRS-epr**
+1. **`PRSepr_prs_file.txt` is the final ensembled PRS solution from PROSPER**
 2. **`R2.txt` is its R2 on tuning and testing samples (if `testing=TRUE`)**
 3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `$PATH_out/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
 
 ## Toy Example
 
-Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (changing the direcotries), and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PRS-epr_example_results.tar.gz` 
+Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (changing the direcotries), and you will get the example output same as [here]( https://drive.google.com/file/d/1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6/view?usp=sharing "example output"); Google Drive <file_id>: `1SWUycZ1oxOV9mGv_NEQaRR1Zl9OGgRi6`; Decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
     
 The files can be downloaded by the provided link, or the command `gdown <file_id>`.
 
 Example codes:
 
 ```
-package='/dcs04/nilanjan/data/jzhang2/PRS-epr'
+package='/dcs04/nilanjan/data/jzhang2/PROSPER'
 path_example='/dcs04/nilanjan/data/jzhang2/example/'
 path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
 target_pop='AFR'
 
 Rscript ${package}/scripts/lassosum2.R \
 --PATH_package ${package} \
---PATH_out ${path_example}/PRS-epr_example_results/lassosum2 \
+--PATH_out ${path_example}/PROSPER_example_results/lassosum2 \
 --PATH_plink ${path_plink} \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
 --pop EUR,AFR \
@@ -156,18 +156,18 @@ Rscript ${package}/scripts/lassosum2.R \
 --testing TRUE \
 --NCORES 5
 
-Rscript ${package}/scripts/PRS-epr.R \
+Rscript ${package}/scripts/PROSPER.R \
 --PATH_package ${package} \
---PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
+--PATH_out ${path_example}/PROSPER_example_results/PRSepr \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
 --pop EUR,AFR \
---lassosum_param ${path_example}/PRS-epr_example_results/lassosum2/EUR/optimal_param.txt,${path_example}/PRS-epr_example_results/lassosum2/AFR/optimal_param.txt \
+--lassosum_param ${path_example}/PROSPER_example_results/lassosum2/EUR/optimal_param.txt,${path_example}/PROSPER_example_results/lassosum2/AFR/optimal_param.txt \
 --chrom 1-22 \
 --NCORES 5
 
 Rscript ${package}/scripts/tuning_testing.R \
 --PATH_plink ${path_plink} \
---PATH_out ${path_example}/PRS-epr_example_results/PRSepr \
+--PATH_out ${path_example}/PROSPER_example_results/PRSepr \
 --prefix ${target_pop} \
 --testing TRUE \
 --bfile_tuning ${path_example}/sample_data/${target_pop}/tuning_geno \
@@ -178,7 +178,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 ```
 
-For your reference, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PRS-epr using the above codes; for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
+For your reference, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER using the above codes; for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
 
 ## Support
