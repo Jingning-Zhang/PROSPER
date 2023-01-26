@@ -149,6 +149,8 @@ for(mmm in 1:M){
 
   # Match summary statistics to reference data
   df_beta <- fread2(sumdata_path)
+  df_beta <- df_beta[!is.na(df_beta$beta) & !is.na(df_beta$beta_se), ]
+  df_beta$n_eff[is.na(df_beta$n_eff)] <- mean(df_beta$n_eff, na.rm=T)
   df_beta <- df_beta[df_beta$rsid %in% ref$V2,]
   ref_tmp <- ref[match(df_beta$rsid, ref$V2),]
 
