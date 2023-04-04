@@ -5,7 +5,7 @@ This is a command line tool based on R programming language for lassosum2. Pleas
 
 ## Getting Started
 
-The required scripts, LD reference panels, and R packages are same as [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ). A toy example is provided also in [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ).
+The required scripts, LD reference panels, and R packages are same as [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ). A toy example is provided also in the last section of README.md on [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ).
 
 ## Using lassosum2
 
