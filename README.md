@@ -14,7 +14,8 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 - Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"), and saved in `${package}`
     
 - Download the LD reference panels and decompress files in `${package}`:
-  Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.
+
+     Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.
    
      [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
 
