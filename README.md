@@ -15,15 +15,15 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
     
 - Download the LD reference panels and decompress files in `${package}`:
    
-     [AFR reference]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "AFR reference") (~12.1G); Google Drive <file_id>: `1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG`; Decompress by `tar -zxvf AFR.tar.gz`
+     [AFR reference]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "AFR reference") (~12.1G); Google Drive <file_id>: `1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG`; decompress by `tar -zxvf AFR.tar.gz`
      
-     [AMR reference]( https://drive.google.com/file/d/1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W/view?usp=sharing "AMR reference") (~10.3G); Google Drive <file_id>: `1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W`; Decompress by `tar -zxvf AMR.tar.gz`
+     [AMR reference]( https://drive.google.com/file/d/1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W/view?usp=sharing "AMR reference") (~10.3G); Google Drive <file_id>: `1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W`; decompress by `tar -zxvf AMR.tar.gz`
         
-     [EAS reference]( https://drive.google.com/file/d/1NzltrpebQiaHYRIN67nTqmRChJ_0MEze/view?usp=sharing "EAS reference") (~6.6G); Google Drive <file_id>: `1NzltrpebQiaHYRIN67nTqmRChJ_0MEze`; Decompress by `tar -zxvf EAS.tar.gz`
+     [EAS reference]( https://drive.google.com/file/d/1NzltrpebQiaHYRIN67nTqmRChJ_0MEze/view?usp=sharing "EAS reference") (~6.6G); Google Drive <file_id>: `1NzltrpebQiaHYRIN67nTqmRChJ_0MEze`; decompress by `tar -zxvf EAS.tar.gz`
         
-     [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; Decompress by `tar -zxvf EUR.tar.gz`
+     [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
      
-     [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; Decompress by `tar -zxvf SAS.tar.gz`
+     [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; decompress by `tar -zxvf SAS.tar.gz`
      
      The files can be downloaded by the provided link. Besides, **gdown** can fast download files from Google Drive to linux by using the command `gdown <file_id>`. **gdown** can be installed using `pip install gdown`.
      
@@ -130,9 +130,9 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; Decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (direcotries are needed t obe changed), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; Decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
+Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; decompress by `tar -zxvf example.tar.gz`. Run the codes as instructed below (direcotries are needed to be changed based on your local directory), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
     
-The files can be downloaded by the provided link, or the command `gdown <file_id>`.
+The files can be downloaded by the provided link, or using the command `gdown <file_id>`.
 
 Example codes:
 
@@ -178,7 +178,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 ```
 
-For your reference, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER using the above codes; for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
+For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. For a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
 
 ## Support
