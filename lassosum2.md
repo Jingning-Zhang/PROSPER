@@ -5,7 +5,7 @@ This is a command line tool based on R programming language for lassosum2. Pleas
 
 ## Getting Started
 
-The required scripts, LD reference panels, and R packages are same as [PRS-epr]( https://github.com/Jingning-Zhang/PRS-epr "PRS-epr"). 
+The required scripts, LD reference panels, and R packages are same as [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ). 
 
 ## Using lassosum2
 
