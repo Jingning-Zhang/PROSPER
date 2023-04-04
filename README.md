@@ -178,7 +178,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 ```
 
-The final output of testing R2 is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/R2.txt`; PROSPER linear PRS model is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/PROSPER_prs_file.txt`. To compare with lassosum (single-ancestry PRS method), you could find the R2 of lassosum in `${path_example}/PROSPER_example_results/lassosum2/${target_pop}/R2.txt`.
+The final output of testing R2 is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/R2.txt`; PROSPER linear PRS model is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/PROSPER_prs_file.txt`. To compare with lassosum (single-ancestry PRS method), you could find the testing R2 of lassosum in `${path_example}/PROSPER_example_results/lassosum2/${target_pop}/R2.txt`.
 
 For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. For a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
