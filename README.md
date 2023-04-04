@@ -15,14 +15,14 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
     
 - Download the LD reference panels and decompress files in `${package}`:
    
+     [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
+
      [AFR reference]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "AFR reference") (~12.1G); Google Drive <file_id>: `1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG`; decompress by `tar -zxvf AFR.tar.gz`
      
      [AMR reference]( https://drive.google.com/file/d/1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W/view?usp=sharing "AMR reference") (~10.3G); Google Drive <file_id>: `1XkVeO6ZqMb7Un_HuTeFrQ908FGKx-i1W`; decompress by `tar -zxvf AMR.tar.gz`
         
      [EAS reference]( https://drive.google.com/file/d/1NzltrpebQiaHYRIN67nTqmRChJ_0MEze/view?usp=sharing "EAS reference") (~6.6G); Google Drive <file_id>: `1NzltrpebQiaHYRIN67nTqmRChJ_0MEze`; decompress by `tar -zxvf EAS.tar.gz`
-        
-     [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
-     
+             
      [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; decompress by `tar -zxvf SAS.tar.gz`
      
      The files can be downloaded by the provided link. Besides, **gdown** can fast download files from Google Drive to linux by using the command `gdown <file_id>`. **gdown** can be installed using `pip install gdown`.
