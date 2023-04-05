@@ -50,7 +50,7 @@ tuning_testing.R --PATH_out --PATH_plink --prefix --SL_library --linear_score --
 
  - **PATH_package** (required): Full path to the directory mentioned above that contains: 1. a folder scripts downloaded from github 2. LD reference panels downloaded from Google Drive.
 
- - **PATH_plink** (required): Full path to plink2 executable
+ - **PATH_plink** (required): Full path to plink2 executable. Please do not use plink1.9.
 
  - **PATH_out** (required): Full path to the directory for output results
 
