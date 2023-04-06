@@ -36,6 +36,8 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
 
+- Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
+
 - **If you only want to try the toy example below, you can directly go down to the last section \<Toy Example\>.**
 
 
