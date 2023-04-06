@@ -8,6 +8,9 @@
 **Apr 5, 2023**: Updated example codes.    
 **Nov 24, 2022**: Repository made public.
 
+
+<br/><br/> 
+
 ## Getting Started
 
 - Download or clone this GitHub repository by `git clone https://github.com/Jingning-Zhang/PROSPER.git`. 
@@ -236,6 +239,8 @@ In this toy example, phenotype data is simulated in a previous paper from [Zhang
 
 For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. Using the same high performance cluster, for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
+
+<br/><br/> 
 
 ## Support
 
