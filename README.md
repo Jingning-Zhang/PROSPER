@@ -52,6 +52,11 @@ tar -zxvf EUR.tar.gz
 gdown 1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG
 tar -zxvf AFR.tar.gz
 
+R
+install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
+q()
+
+
 ```
 
 - **If you only want to try the toy example, you can skip the next sections and directly go down to the last section \<Toy Example\>.**
