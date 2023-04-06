@@ -11,13 +11,13 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 
 - We'll refer to the corresponding directory as `${package}` throughout the following steps. The directory will be used to store PROSPER package and its LD refernce panels. After you clone using the command above, there should be a folder named `scripts` inside the directory of `${package}`. 
 
-- Note that the files required for downloaded below are all stored on Google Drive. You can download them either by clicking on the provided link or by running the following command `gdown <file_id>`, using the file_id provided below. To use `gdown`, please check [here](https://github.com/wkentaro/gdown "here"). You will need to add it to PATH for use.
+- Note that the files required for downloaded below are all stored on Google Drive. You can download them either by clicking on the provided link or by running the following command `gdown <file_id>`, using the file_id provided below. `gdown` is much faster for downloading to high performance clusters. To use `gdown`, please check [here](https://github.com/wkentaro/gdown "here"). You will need to add it to PATH for use.
 
 - Download the `ref_bim.txt` and saved in `${package}` from [ref_bim.txt]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim.txt"); Google Drive <file_id>: `1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT`.
     
 - Download the LD reference panels and decompress files in `${package}`:
 
-     Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.
+     <ins>Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.</ins>
    
      [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
 
