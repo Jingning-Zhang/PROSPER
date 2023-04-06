@@ -9,7 +9,7 @@ The required scripts, LD reference panels, R packages, and inputs are same as [P
 
 ## Using lassosum2
 
-A toy example is provided also in the last section of README.md on [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ).
+A toy example is provided also in the last section of [README.md](https://github.com/Jingning-Zhang/PROSPER/blob/main/README.md) on the website of [PROSPER]( https://github.com/Jingning-Zhang/PROSPER).
 
 Example codes for runing lassosum2 in both EUR and AFR populations:
 
