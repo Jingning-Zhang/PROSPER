@@ -11,7 +11,9 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 
 - We'll refer to the corresponding directory as `${package}` throughout the following steps. There should be a folder named **scripts** inside the directory of `${package}`. The directory will be used to store PROSPER package and its LD refernce panels.
 
-- Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"); Google Drive <file_id>: `1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT`, and saved in `${package}`
+- Note that the files required for downloaded below are all stored on Google Drive. You can download them either by clicking on the provided link or by running the following command `gdown <file_id>`, using the file_id provided below. To use **gdown**, you'll need to install it first with the command `pip install gdown`.
+
+- Download the `ref_bim.txt` and saved in `${package}` from [ref_bim.txt]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim.txt"); Google Drive <file_id>: `1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT`.
     
 - Download the LD reference panels and decompress files in `${package}`:
 
@@ -26,9 +28,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
      [EAS reference]( https://drive.google.com/file/d/1NzltrpebQiaHYRIN67nTqmRChJ_0MEze/view?usp=sharing "EAS reference") (~6.6G); Google Drive <file_id>: `1NzltrpebQiaHYRIN67nTqmRChJ_0MEze`; decompress by `tar -zxvf EAS.tar.gz`
              
      [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; decompress by `tar -zxvf SAS.tar.gz`
-     
-     The files can be downloaded by the provided link. Besides, **gdown** can fast download files from Google Drive to linux by using the command `gdown <file_id>`, using the file_id provided above. **gdown** can be installed using `pip install gdown`.
-     
+          
      The LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes. 
      
 - Launch R and install required libraries:
