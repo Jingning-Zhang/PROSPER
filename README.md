@@ -185,6 +185,7 @@ Rscript ${package}/scripts/tuning_testing.R \
 --pheno_tuning ${path_example}/sample_data/${target_pop}/pheno.fam \
 --bfile_testing ${path_example}/sample_data/${target_pop}/testing_geno \
 --pheno_testing ${path_example}/sample_data/${target_pop}/pheno.fam \
+--cleanup F \
 --NCORES 5
 
 ```
