@@ -149,7 +149,6 @@ package='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER'
 path_example='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/example/'
 path_result='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/PROSPER_example_results/'
 path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
-target_pop='AFR'
 
 mkdir ${path_result}
 
@@ -175,6 +174,8 @@ Rscript ${package}/scripts/PROSPER.R \
 --lassosum_param ${path_result}/lassosum2/EUR/optimal_param.txt,${path_result}/lassosum2/AFR/optimal_param.txt \
 --chrom 1-22 \
 --NCORES 5
+
+target_pop='AFR'
 
 Rscript ${package}/scripts/tuning_testing.R \
 --PATH_plink ${path_plink} \
