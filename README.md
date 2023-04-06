@@ -194,7 +194,7 @@ The testing R<sup>2</sup> of PROSPER is in `${path_result}/PROSPER/after_ensembl
 
 To compare with lassosum2 (the single-ancestry PRS method using penalized regression), you could find the testing R<sup>2</sup> of lassosum in `${path_result}/lassosum2/${target_pop}/R2.txt`.
 
-In this toy example, phenotype data is simulated in a previous paper from [Zhang et al.](https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract), and the total simulated common-SNP heritability is assumed to be 0.32 and 0.19 for AFR and EUR, respectively. In this example, for AFR, the single-ancestry lassosum2 generates a testing R<sup>2</sup> of 0.8%, and the multi-ancestry PROSPER generates a testing R<sup>2</sup> of 1.8%.
+In this toy example, phenotype data is simulated in a previous paper from [Zhang et al.](https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract). The sample size is 15K and 100K for AFR and EUR, respectively; and the total simulated common-SNP heritability is assumed to be 0.32 and 0.19 for AFR and EUR, respectively. The resulting testing R<sup>2</sup> for AFR is 0.8% using the single-ancestry lassosum2 model, and 1.8% using the multi-ancestry PROSPER model.
 
 <!-- In this example, the single-ancestry lassosum2 generates a testing R<sup>2</sup> of 0.8% and 11.1% for EUR and AFR, respectively; and the multi-ancestry PROSPER generates a testing R<sup>2</sup> of 11.6% and 1.8% for EUR and AFR, respectively. -->
 
