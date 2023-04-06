@@ -17,7 +17,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
     
 - Download the LD reference panels and decompress files in `${package}`:
 
-     <ins>Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.</ins>
+     **Note that if you only want to try the toy example below, you will only need the first two: EUR and AFR reference.**
    
      [EUR reference]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR.tar.gz`
 
