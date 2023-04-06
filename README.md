@@ -38,7 +38,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
 
-- example codes 
+- Example codes for all steps above:
 
 ```
 git clone https://github.com/Jingning-Zhang/PROSPER.git
