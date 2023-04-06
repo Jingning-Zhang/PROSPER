@@ -79,6 +79,12 @@ Ngridsearch <- Ll*Lc
 
 
 suppressWarnings(dir.create(opt$PATH_out))
+
+if(! dir.exists(opt$PATH_out)){
+  cat( "ERROR: output path does not exist\n" )
+  q()
+}
+
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/tmp")))
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/tmp/PRS_in_all_settings_bychrom")))
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/before_ensemble")))
