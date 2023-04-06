@@ -191,9 +191,11 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 The testing R2 of PROSPER is in `${path_result}/PROSPER/after_ensemble_${target_pop}/R2.txt`; The linear PRS model of PROSPER is in `${path_result}/PROSPER/after_ensemble_${target_pop}/PROSPER_prs_file.txt`. 
 
-To compare with lassosum (the single-ancestry PRS method using penalized regression), you could find the testing R2 of lassosum in `${path_result}/lassosum2/${target_pop}/R2.txt`.
+To compare with lassosum2 (the single-ancestry PRS method using penalized regression), you could find the testing R2 of lassosum in `${path_result}/lassosum2/${target_pop}/R2.txt`.
 
-For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. For a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
+In this toy example, phenotype data is simulated in a previous paper from [Zhang et al.](https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract), and the total simulated common-SNP heritability is assumed to be 0.32 and 0.19 for AFR and EUR, respectively. In this example, the single-ancestry lassosum2 generates a testing R2 of 0.8% and the multi-ancestry PROSPER generates a testing R2 of 1.8%.
+
+For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. Using the same high performance cluster, for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
 
 ## Support
