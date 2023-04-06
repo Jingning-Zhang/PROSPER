@@ -38,7 +38,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
 
-- **If you only want to try the toy example below, you can directly go down to the last section \<Toy Example\>.**
+- **If you only want to try the toy example, you can skip the next sections and directly go down to the last section \<Toy Example\>.**
 
 
 ## Using PROSPER
