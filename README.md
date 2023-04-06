@@ -147,12 +147,13 @@ Example codes:
 ```
 package='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER'
 path_example='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/example/'
+path_result='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/PROSPER_example_results/'
 path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
 target_pop='AFR'
 
 Rscript ${package}/scripts/lassosum2.R \
 --PATH_package ${package} \
---PATH_out ${path_example}/PROSPER_example_results/lassosum2 \
+--PATH_out ${path_result}/lassosum2 \
 --PATH_plink ${path_plink} \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
 --pop EUR,AFR \
@@ -166,16 +167,16 @@ Rscript ${package}/scripts/lassosum2.R \
 
 Rscript ${package}/scripts/PROSPER.R \
 --PATH_package ${package} \
---PATH_out ${path_example}/PROSPER_example_results/PROSPER \
+--PATH_out ${path_result}/PROSPER \
 --FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
 --pop EUR,AFR \
---lassosum_param ${path_example}/PROSPER_example_results/lassosum2/EUR/optimal_param.txt,${path_example}/PROSPER_example_results/lassosum2/AFR/optimal_param.txt \
+--lassosum_param ${path_result}/lassosum2/EUR/optimal_param.txt,${path_result}/lassosum2/AFR/optimal_param.txt \
 --chrom 1-22 \
 --NCORES 5
 
 Rscript ${package}/scripts/tuning_testing.R \
 --PATH_plink ${path_plink} \
---PATH_out ${path_example}/PROSPER_example_results/PROSPER \
+--PATH_out ${path_result}/PROSPER \
 --prefix ${target_pop} \
 --testing TRUE \
 --bfile_tuning ${path_example}/sample_data/${target_pop}/tuning_geno \
@@ -186,9 +187,9 @@ Rscript ${package}/scripts/tuning_testing.R \
 
 ```
 
-The testing R2 of PROSPER is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/R2.txt`; The linear PRS model of PROSPER is in `${path_example}/PROSPER_example_results/PROSPER/after_ensemble_${target_pop}/PROSPER_prs_file.txt`. 
+The testing R2 of PROSPER is in `${path_result}/PROSPER/after_ensemble_${target_pop}/R2.txt`; The linear PRS model of PROSPER is in `${path_result}/PROSPER/after_ensemble_${target_pop}/PROSPER_prs_file.txt`. 
 
-To compare with lassosum (the single-ancestry PRS method using penalized regression), you could find the testing R2 of lassosum in `${path_example}/PROSPER_example_results/lassosum2/${target_pop}/R2.txt`.
+To compare with lassosum (the single-ancestry PRS method using penalized regression), you could find the testing R2 of lassosum in `${path_result}/lassosum2/${target_pop}/R2.txt`.
 
 For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. For a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
