@@ -5,7 +5,7 @@
 
 ## Recent Version History
 
-**Apr 5, 2023**: Updated example codes.
+**Apr 5, 2023**: Updated example codes.    
 **Nov 24, 2022**: Repository made public.
 
 ## Getting Started
