@@ -64,6 +64,8 @@ tar -zxvf AFR.tar.gz
 - **If you only want to try the toy example, you can skip the next sections and directly go down to the last section \<Toy Example\>.**
 
 
+<br/><br/> 
+
 ## Using PROSPER
 
 There are two scripts `PROSPER.R` and `tuning_testing.R`. The first one is used to get solutions from all tuning parameters setting, and then the second one is used to perform tuning/testing and get the final ensembled PRS. The parameters are explained in this section. At the end of this README file, there is a toy example, including example codes and results.
