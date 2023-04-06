@@ -2,10 +2,6 @@
 
 **PROSPER** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
 
-Preprint manuscript will be put online very soon. Please contact Jingning Zhang (jzhan218@jhu.edu) for citation.
-
-Please cite Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ancestry Polygenic Risk Prediction" Biorxiv (2023). (https://www.biorxiv.org/content/10.1101/2023.03.15.532652v1.abstract)
-
 
 ## Recent Version History
 
@@ -245,4 +241,7 @@ For your reference, as shown in this example, for a two-ancestry analysis (EUR,A
 
 Please direct any problems or questions to Jingning Zhang (jzhan218@jhu.edu).
 
+## Reference
+
+Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ancestry Polygenic Risk Prediction" Biorxiv (2023). (https://www.biorxiv.org/content/10.1101/2023.03.15.532652v1.abstract)
 
