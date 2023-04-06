@@ -41,21 +41,23 @@ install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearn
 - Example codes for all steps above:
 
 ```
+## download PROSPER package
 git clone https://github.com/Jingning-Zhang/PROSPER.git
 
+## go to the directory
 cd PROSPER
 
+## download reference SNPs
 gdown 1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT
 
+## download EUR reference LD
 gdown 1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6
 tar -zxvf EUR.tar.gz
+## download AFR reference LD
 gdown 1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG
 tar -zxvf AFR.tar.gz
 
-R
-install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
-q()
-
+## You will still need to install plink2 and the required R packages
 
 ```
 
