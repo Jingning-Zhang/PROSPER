@@ -38,6 +38,22 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
 
+- example codes 
+
+```
+git clone https://github.com/Jingning-Zhang/PROSPER.git
+
+cd PROSPER
+
+gdown 1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT
+
+gdown 1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6
+tar -zxvf EUR.tar.gz
+gdown 1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG
+tar -zxvf AFR.tar.gz
+
+```
+
 - **If you only want to try the toy example, you can skip the next sections and directly go down to the last section \<Toy Example\>.**
 
 
@@ -137,9 +153,16 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 
 ## Toy Example
 
-Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; decompress by `tar -zxvf example.tar.gz`.     
+- Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa`; decompress by `tar -zxvf example.tar.gz`.     
 
-Run the codes as instructed below (direcotries are needed to be changed based on your local directory), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
+- example codes:
+
+```
+gdown 1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa
+tar -zxvf example.tar.gz
+```
+
+- Run the codes as instructed below (direcotries are needed to be changed based on your local directory), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
     
     
 Example codes:
