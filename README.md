@@ -145,8 +145,8 @@ Run the codes as instructed below (direcotries are needed to be changed based on
 Example codes:
 
 ```
-package='/dcs04/nilanjan/data/jzhang2/PROSPER'
-path_example='/dcs04/nilanjan/data/jzhang2/example/'
+package='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER'
+path_example='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/example/'
 path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
 target_pop='AFR'
 
