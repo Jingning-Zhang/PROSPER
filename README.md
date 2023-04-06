@@ -151,6 +151,8 @@ path_result='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/
 path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
 target_pop='AFR'
 
+mkdir ${path_result}
+
 Rscript ${package}/scripts/lassosum2.R \
 --PATH_package ${package} \
 --PATH_out ${path_result}/lassosum2 \
