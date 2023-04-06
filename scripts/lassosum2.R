@@ -76,6 +76,11 @@ if ( opt$verbose == 2 ) { SYS_PRINT = F } else { SYS_PRINT = T }
 
 suppressWarnings(dir.create(opt$PATH_out))
 
+if(! dir.exists(opt$PATH_out)){
+  cat( "ERROR: output path does not exist\n" )
+  q()
+}
+
 ethnic_vec = str_split(opt$pop,",")[[1]]; M <- length(ethnic_vec)
 sumdata_path_vec = str_split(opt$FILE_sst,",")[[1]]
 out_path_vec <- paste0(opt$PATH_out,"/",ethnic_vec)
