@@ -85,6 +85,13 @@ if("SL.nnet" %in% SL_library & opt$linear_score){
   }
 }
 
+suppressWarnings(dir.create(paste0(opt$PATH_out)))
+
+if(! dir.exists(opt$PATH_out)){
+  cat( "ERROR: output path does not exist\n" )
+  q()
+}
+
 suppressWarnings(dir.create(paste0(opt$PATH_out, "/after_ensemble_",opt$prefix)))
 
 
