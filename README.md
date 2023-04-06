@@ -9,7 +9,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 
 - Create a directory for storing PROSPER package and its LD refernce panels. Denoted by `${package}`.
 
-- Download the scripts from `https://github.com/Jingning-Zhang/PROSPER`, and saved in `${package}` in a folder named **scripts**
+- Download the scripts in this repo, and saved in a folder named **scripts** inside the directory of `${package}`.
 
 - Download the `ref_bim.txt` from [ref_bim]( https://drive.google.com/file/d/1PtD4qk7EBPxdhkGrKrG8OktKxaSDF9AT/view?usp=sharing "ref_bim"), and saved in `${package}`
     
