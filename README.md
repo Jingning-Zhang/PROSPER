@@ -9,7 +9,7 @@
 **Nov 24, 2022**: Repository made public.
 
 
-<br/><br/> 
+<br/>
 
 ## Getting Started
 
@@ -70,7 +70,7 @@ tar -zxvf AFR.tar.gz
 - **If you only want to try the toy example, you can skip the next sections and directly go down to the last section \<Toy Example\>.**
 
 
-<br/><br/> 
+<br/>
 
 ## Using PROSPER
 
@@ -167,7 +167,7 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `$PATH_out/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
 
 
-<br/><br/> 
+<br/>
 
 ## Toy Example
 
@@ -240,7 +240,7 @@ In this toy example, phenotype data is simulated in a previous paper from [Zhang
 For your reference, as shown in this example, for a two-ancestry analysis (EUR,AFR) on all autosomal chromosomes (1-22) using 5 cores, it takes ~20 minutes and ~25Gb (~5Gb each core) to run PROSPER. Using the same high performance cluster, for a five-ancestry analysis (EUR,AFR,AMR,EAS,SAS) on all autosomal chromosomes (1-22) using 5 cores, it takes ~43 minutes and ~35Gb (~7Gb each core). 
 
 
-<br/><br/> 
+<br/>
 
 ## Support
 
