@@ -5,11 +5,37 @@ This is a command line tool based on R programming language for lassosum2. Pleas
 
 ## Getting Started
 
-The required scripts, LD reference panels, and R packages are same as [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ). A toy example is provided also in the last section of README.md on [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ).
+The required scripts, LD reference panels, and R packages are same as [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ). 
 
 ## Using lassosum2
 
-An example of using lassosum2 in command line
+A toy example is provided also in the last section of README.md on [PROSPER]( https://github.com/Jingning-Zhang/PROSPER ).
+
+Example codes for runing lassosum2 in both EUR and AFR populations:
+
+```
+package='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER'
+path_example='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/example/'
+path_result='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER/PROSPER_example_results/'
+path_plink='/dcs04/nilanjan/data/jzhang2/TOOLS/plink/plink2'
+
+mkdir ${path_result}
+
+Rscript ${package}/scripts/lassosum2.R \
+--PATH_package ${package} \
+--PATH_out ${path_result}/lassosum2 \
+--PATH_plink ${path_plink} \
+--FILE_sst ${path_example}/summdata/EUR.txt,${path_example}/summdata/AFR.txt \
+--pop EUR,AFR \
+--chrom 1-22 \
+--bfile_tuning ${path_example}/sample_data/EUR/tuning_geno,${path_example}/sample_data/AFR/tuning_geno \
+--pheno_tuning ${path_example}/sample_data/EUR/pheno.fam,${path_example}/sample_data/AFR/pheno.fam \
+--bfile_testing ${path_example}/sample_data/EUR/testing_geno,${path_example}/sample_data/AFR/testing_geno \
+--pheno_testing ${path_example}/sample_data/EUR/pheno.fam,${path_example}/sample_data/AFR/pheno.fam \
+--testing TRUE \
+--NCORES 5
+
+```
 
 
 <!-- 
