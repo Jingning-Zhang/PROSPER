@@ -160,6 +160,8 @@ The script `tuning_testing.R` creates a directory `$PATH_out/after_ensemble_$pre
 2. **`R2.txt` is its R2 on tuning and testing samples (if `testing=TRUE`)**
 3. `superlearner_function.RData` contains two variables `sl` (super learner model) and `score_drop` (scores in the `$PATH_out/before_ensemble/score_file.txt` that needs to be dropped before input into `sl`). If a non-linear model is specified in `linear_score`, only `superlearner_function.RData` can be saved.
 
+<br/><br/> 
+
 ## Toy Example
 
 - Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa/view?usp=sharing "example data"); Google Drive <file_id>: `1IdgiBveqTXuyuQMfWp7ys8ZAmOeB52wa` and decompress by using codes:
