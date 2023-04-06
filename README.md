@@ -31,12 +31,12 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
           
      The LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes. 
      
+- Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
+
 - Launch R and install required libraries:
 ```
 install.packages(c('optparse','bigreadr','readr','stringr', 'caret', 'SuperLearner', 'glmnet', 'MASS', 'Rcpp', 'RcppArmadillo', 'inline', 'doMC', 'foreach'))
 ```
-
-- Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
 
 - **If you only want to try the toy example below, you can directly go down to the last section \<Toy Example\>.**
 
@@ -141,8 +141,7 @@ Please download [example data]( https://drive.google.com/file/d/1IdgiBveqTXuyuQM
 
 Run the codes as instructed below (direcotries are needed to be changed based on your local directory), and you will get the example output same as [here]( https://drive.google.com/file/d/16CREbH4emYUHudvy5HpHSbwH5111X-9R/view?usp=sharing "example output"); Google Drive <file_id>: `16CREbH4emYUHudvy5HpHSbwH5111X-9R`; decompress by `tar -zxvf PROSPER_example_results.tar.gz` 
     
-The files can be downloaded by the provided link, or using the command `gdown <file_id>`.
-
+    
 Example codes:
 
 ```
