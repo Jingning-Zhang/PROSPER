@@ -273,7 +273,7 @@ ff <- foreach(j = 1:length(allchrom), ii = icount(), .final = function(x) NULL) 
       m <- match(snp_list1[[bl]], snp_list_tmp[[l]]); m1 <- m; m1[is.na(m1)] <- 0; indx_tmp[,l] <- m1
       m1 <- summ_list0[[l]][[bl]][m]; summ_list_tmp[,l] <- m1
       m1 <- snps_scale0[[l]][[bl]][m]; snps_scale_tmp[,l] <- m1
-      m1 <- LD_list0[[l]][[bl]][m,m]; m1[is.na(m1)] <- 0; diag(m1)[is.na(m)] <- 1; LD_list_tmp[[l]] <- m1
+      m1 <- as.matrix(LD_list0[[l]][[bl]][m,m]); m1[is.na(m1)] <- 0; diag(m1)[is.na(m)] <- 1; LD_list_tmp[[l]] <- m1
     }
     indx1[[bl]] <- indx_tmp
     summ_list1[[bl]] <- summ_list_tmp
