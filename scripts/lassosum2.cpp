@@ -75,6 +75,14 @@ List enet_singlethnic_bl(vec summ,
 
   int p = summ.n_elem; // number of SNP
 
+  if(p==0){
+    return List::create(Named("conv") = 0,
+                        Named("niter") = 0,
+                        Named("lambda") = lambda,
+                        Named("delta") = delta,
+                        Named("b") = summ);
+  }
+    
   vec b(p); b.fill(0.0); // store coefficient
 
   double dlx, del, tmp, ui;
