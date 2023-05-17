@@ -94,6 +94,12 @@ List enet_multiethnic_bl(mat summ, List R, mat indx, int M,
                          vec delta, vec lambda, mat c,
                          double thresh=1e-04, int maxiter=1000){
   int p = indx.n_rows; // number of SNP
+  
+  if(p==0){
+    return List::create(Named("conv") = 0,
+                        Named("niter") = 0,
+                        Named("b") = summ);
+  }
 
   mat b(p, M); b.fill(0.0); // store coefficient
 
