@@ -205,16 +205,17 @@ rm(list=c("after_ensemble_tuning"))
 
 if(opt$linear_score){
 
+  # read coefficients of all candidate PRS models (row: variants; column: PRS models)
   score <- fread2(paste0(opt$PATH_out,"/before_ensemble/score_file.txt"), sep="\t", nThread=NCORES)
   if(length(score_drop)>0){ score <- score[,-score_drop,drop=F] }
 
-  # Get weights of all scores (wi) by predicting on a identity matrix
+  # Get weights of all scores (wi) by predicting on an identity matrix
   tmp <- rbind(rep(0,ncol(SCORE)), diag(ncol(SCORE)))
   colnames(tmp) <- colnames(data.frame(SCORE))
   tmp <- predict(sl, tmp, onlySL = TRUE)[[1]]
   coef <- (tmp-tmp[1])[-1]
 
-  # Get weights of variants (wi * snpj)
+  # Get weights of variants (wi * betaj)
   ensemble_score <- data.frame(score[,1:3], weight = as.matrix(score[,-(1:3)]) %*% matrix(coef, ncol=1))
   ensemble_score <- ensemble_score[ensemble_score$weight!=0,]
 
