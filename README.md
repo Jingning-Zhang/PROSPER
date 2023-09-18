@@ -36,9 +36,11 @@
      [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; decompress by `tar -zxvf SAS.tar.gz`
           
      The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes.
+  
+     **New update: We newly constructed the EUR reference using ~337K unrelated UKB white samples.**
+     [EUR reference constructed using UKB]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~8.6G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
-  **New update: We newly constructed the EUR reference using ~337K unrelated UKB white samples. **
-     
+  
 - Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
 
 - Launch R and install required libraries:
