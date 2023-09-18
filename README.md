@@ -39,7 +39,7 @@
           
      The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes.
   
-     **New update: We newly constructed the EUR reference using about 337K unrelated UKB white samples.**
+     **New update: We constructed the EUR reference using about 337K unrelated UKB white samples.**
         
      [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~13.4G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
