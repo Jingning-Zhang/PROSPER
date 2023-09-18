@@ -41,7 +41,7 @@
   
      **New update: We newly constructed the EUR reference using about 337K unrelated UKB white samples.**
         
-     [EUR reference constructed using UKB]( https://drive.google.com/file/d/1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6/view?usp=sharing "EUR reference") (~13.4G); Google Drive <file_id>: `1ger1-jsoD73vCez5vN6h4QD5TMdU_WS6`; decompress by `tar -zxvf EUR_ukb.tar.gz`
+     [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~13.4G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
   
 - Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
