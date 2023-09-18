@@ -5,6 +5,7 @@
 
 ## Recent Version History
 
+**Sept 18, 2023**: Updated citation biorxiv version.    
 **Sept 11, 2023**: Upload EUR LD reference constructed by UKB.    
 **Apr 5, 2023**: Updated example codes.    
 **Nov 24, 2022**: Repository made public.
@@ -252,7 +253,7 @@ For your reference, as shown in this example, for a two-ancestry analysis (EUR,A
 
 Please direct any problems or questions to Jingning Zhang (jzhan218@jhu.edu).
 
-## Reference
+## Citation
 
-Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ancestry Polygenic Risk Prediction" Biorxiv (2023). (https://www.biorxiv.org/content/10.1101/2023.03.15.532652v1.abstract)
+Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ancestry Polygenic Risk Prediction" Biorxiv (2023). (https://www.biorxiv.org/content/10.1101/2023.03.15.532652v2)
 
