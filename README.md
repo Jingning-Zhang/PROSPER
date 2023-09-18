@@ -5,9 +5,9 @@
 
 ## Recent Version History
 
-**Sept 18, 2023**: Updated citation biorxiv version.    
+**Sept 18, 2023**: Update citation biorxiv version.    
 **Sept 11, 2023**: Upload EUR LD reference constructed by UKB.    
-**Apr 5, 2023**: Updated example codes.    
+**Apr 5, 2023**: Update example codes.    
 **Nov 24, 2022**: Repository made public.
 
 
