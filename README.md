@@ -37,7 +37,7 @@
              
      [SAS reference]( https://drive.google.com/file/d/1qFKpSLR3i3YikXGInStSQs6HidMdb9lc/view?usp=sharing "SAS reference") (~8.4G); Google Drive <file_id>: `1qFKpSLR3i3YikXGInStSQs6HidMdb9lc`; decompress by `tar -zxvf SAS.tar.gz`
           
-     The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jzhan218@jhu.edu) for codes.
+     The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jingningzhang238@gmail.com) for codes.
   
      **New update: We constructed the EUR reference using about 337K unrelated UKB white samples.**
         
@@ -251,7 +251,7 @@ For your reference, as shown in this example, for a two-ancestry analysis (EUR,A
 
 ## Support
 
-Please direct any problems or questions to Jingning Zhang (jzhan218@jhu.edu).
+Please direct any problems or questions to Jingning Zhang (jingningzhang238@gmail.com).
 
 ## Citation
 
