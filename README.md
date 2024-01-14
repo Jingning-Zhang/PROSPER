@@ -5,6 +5,7 @@
 
 ## Recent Version History
 
+**Jan 14, 2024**: Upload AFR, EAS, and SAS LD reference constructed by UKB.    
 **Sept 18, 2023**: Update citation biorxiv version.    
 **Sept 11, 2023**: Upload EUR LD reference constructed by UKB.    
 **Apr 5, 2023**: Update example codes.    
@@ -39,9 +40,16 @@
           
      The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jingningzhang238@gmail.com) for codes.
   
-     **New update: We constructed the EUR reference using about 337K unrelated UKB white samples.**
+     **New update: We constructed the EUR reference using ~337K unrelated UKB white samples.**
+     **New update: We constructed the AFR (~3K), EAS (~0.6K), SAS (~1.8K) reference using unrelated UKB samples from the corresponding genetic ancestry.**
         
      [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~13.4G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
+
+     [AFR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "AFR reference") (~13.3G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf AFR_ukb.tar.gz`
+
+     [EAS reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EAS reference") (~7.9G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EAS_ukb.tar.gz`
+
+     [SAS reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "SAS reference") (~10.8G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf SAS_ukb.tar.gz`
 
   
 - Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
