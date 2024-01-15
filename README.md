@@ -45,11 +45,11 @@
         
      [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~12.5G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
-     [AFR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "AFR reference") (~13.3G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf AFR_ukb.tar.gz`
+     [AFR reference constructed using UKB]( https://drive.google.com/file/d/1C-0gXkDP0VCk3tsroPdnQnic0N7KCXau/view?usp=sharing "AFR reference") (~12.4G); Google Drive <file_id>: `1C-0gXkDP0VCk3tsroPdnQnic0N7KCXau`; decompress by `tar -zxvf AFR_ukb.tar.gz`
 
-     [EAS reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EAS reference") (~7.9G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EAS_ukb.tar.gz`
+     [EAS reference constructed using UKB]( https://drive.google.com/file/d/1kFP6I9Tii7B5N2mFcPOaYfmfoSDs847I/view?usp=sharing "EAS reference") (~7.3G); Google Drive <file_id>: `1kFP6I9Tii7B5N2mFcPOaYfmfoSDs847I`; decompress by `tar -zxvf EAS_ukb.tar.gz`
 
-     [SAS reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "SAS reference") (~10.8G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf SAS_ukb.tar.gz`
+     [SAS reference constructed using UKB]( https://drive.google.com/file/d/106ctOO-ebpiOA-9W-cclmch6h6FAnpUW/view?usp=sharing "SAS reference") (~10.1G); Google Drive <file_id>: `106ctOO-ebpiOA-9W-cclmch6h6FAnpUW`; decompress by `tar -zxvf SAS_ukb.tar.gz`
 
   
 - Download plink 2.0 from [here](https://www.cog-genomics.org/plink/2.0/ "here").
