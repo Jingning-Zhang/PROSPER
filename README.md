@@ -43,6 +43,8 @@
      **New update: We constructed the EUR reference using ~337K unrelated UKB white samples.**
   
      **New update: We constructed the AFR (~3K), EAS (~0.6K), SAS (~1.8K) reference using unrelated UKB samples from the corresponding genetic ancestry.**
+
+     **If using the UKB reference panel, please rename the directory to the ancestry name after decompression, e.g. `mv EUR_ukb EUR`.**
         
      [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~12.5G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
