@@ -50,16 +50,16 @@ opt = parse_args(OptionParser(option_list=option_list))
 
 # Perform i/o checks here:
 files <- paste(opt$bfile_tuning,c(".bed",".bim",".fam"),sep='')
-if ( !is.na(opt$pheno_tuning) ) files <- c(files,opt$pheno_tuning)
-if ( !is.na(opt$covar_tuning) ) files <- c(files,opt$covar_tuning)
+if ( !is.na(opt$pheno_tuning)[1] ) files <- c(files,opt$pheno_tuning)
+if ( !is.na(opt$covar_tuning)[1] ) files <- c(files,opt$covar_tuning)
 if(opt$testing){
   if(is.na(opt$bfile_testing)){
     cat( "ERROR: Please provide testing bfile\n" , sep='', file=stderr() )
     q()
   }
   files <- c(files, paste(opt$bfile_testing,c(".bed",".bim",".fam"),sep=''))
-  if ( !is.na(opt$pheno_testing) ) files <- c(files,opt$pheno_testing)
-  if ( !is.na(opt$covar_testing) ) files <- c(files,opt$covar_testing)
+  if ( !is.na(opt$pheno_testing)[1] ) files <- c(files,opt$pheno_testing)
+  if ( !is.na(opt$covar_testing)[1] ) files <- c(files,opt$covar_testing)
 }
 for ( f in files ) {
   if ( !file.exists(f) ){
