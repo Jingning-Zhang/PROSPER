@@ -102,16 +102,16 @@ covar_testing_vec <- str_split(opt$covar_testing,",")[[1]]
 files <- NULL
 files <- c(files, sumdata_path_vec)
 for(mmm in 1:M){ files <- c(files, paste(bfile_tuning_vec[mmm],c(".bed",".bim",".fam"),sep='')) }
-suppressWarnings(if ( !is.na(pheno_tuning_vec) ) { files <- c(files, pheno_tuning_vec) })
-suppressWarnings(if ( !is.na(covar_tuning_vec) ) { files <- c(files, covar_tuning_vec) })
+suppressWarnings(if ( !is.na(pheno_tuning_vec)[1] ) { files <- c(files, pheno_tuning_vec) })
+suppressWarnings(if ( !is.na(covar_tuning_vec)[1] ) { files <- c(files, covar_tuning_vec) })
 if(opt$testing){
   if(is.na(bfile_testing_vec)[1]){
     cat( "ERROR: Please provide testing bfile\n" , sep='', file=stderr() )
     q()
   }
   for(mmm in 1:M){ files <- c(files, paste(bfile_testing_vec[mmm],c(".bed",".bim",".fam"),sep='')) }
-  suppressWarnings(if ( !is.na(pheno_testing_vec) ) { files <- c(files, pheno_testing_vec) })
-  suppressWarnings(if ( !is.na(covar_testing_vec) ) { files <- c(files, covar_testing_vec) })
+  suppressWarnings(if ( !is.na(pheno_testing_vec)[1] ) { files <- c(files, pheno_testing_vec) })
+  suppressWarnings(if ( !is.na(covar_testing_vec)[1] ) { files <- c(files, covar_testing_vec) })
 }
 
 for ( f in files ) {
