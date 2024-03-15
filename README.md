@@ -1,6 +1,6 @@
 # PROSPER
 
-**PROSPER** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
+We proposed **PROSPER**, a new multi-ancestry PRS method with penalized regression followed by ensemble learning. This software is a command line tool based on R programming language. Large-scale benchmarking study shows that PROSPER could be the leading method to reduce the disparity of PRS performance across ancestry groups. 
 
 
 ## Recent Version History
