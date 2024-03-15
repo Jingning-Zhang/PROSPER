@@ -1,6 +1,6 @@
-# Simpler version of lassosum2
+# Simplified version of lassosum2
 
-This is a command line tool based on R programming language for lassosum2. Please contact Jingning Zhang (jzhan218@jhu.edu) if you have any questions.
+This is a command line tool based on R programming language for lassosum2. This is a simplified version of lassosum2 implemented in PROSPER. Please be careful if using it separately. Please contact Jingning Zhang (jingningzhang238@gmail.com) if you have any questions.
 
 
 ## Getting Started
@@ -11,7 +11,7 @@ The required scripts, LD reference panels, R packages, and inputs are same as [P
 
 A toy example is provided also in the last section of [README.md](https://github.com/Jingning-Zhang/PROSPER/blob/main/README.md) on the website of [PROSPER]( https://github.com/Jingning-Zhang/PROSPER).
 
-Example codes for runing lassosum2 in both EUR and AFR populations:
+Example codes for running lassosum2 in both EUR and AFR populations:
 
 ```
 package='/dcs04/nilanjan/data/jzhang2/MEPRS/pacakge/try_from_github/PROSPER'
@@ -109,7 +109,7 @@ Note that the summary statistics files are suggested to be cleaned as follows be
 
  - **pop** (required): Population of the GWAS sample (AFR, AMR, EAS, EUR and SAS), in the same order of the GWAS summary statistics files, separated by comma.
 
- - **lassosum_param** (required): Full path and the file name of the optimal tuning parameters in lassosum2, separated by comma. The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used a simplifier version [here]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "lassosum2") which is faster and requires less computation resource. The file must have the following format
+ - **lassosum_param** (required): Full path and the file name of the optimal tuning parameters in lassosum2, separated by comma. The optimal parameters can be obtained by running the official [lassosum2]( https://privefl.github.io/bigsnpr-extdoc/polygenic-scores-pgs.html#example-ldpred2-and-lassosum2 "lassosum2"), or used a Simplified version [here]( https://drive.google.com/file/d/1aGwAGdIeVmTaTskSuUdEPE6Z9-evSlUG/view?usp=sharing "lassosum2") which is faster and requires less computation resource. The file must have the following format
 ```
     delta0    lambda0
     49.8      0.002
@@ -150,7 +150,7 @@ Note that the summary statistics files are suggested to be cleaned as follows be
 
 ## Support
 
-Please direct any problems or questions to Jingning Zhang (jzhan218@jhu.edu).
+Please direct any problems or questions to Jingning Zhang (jingningzhang238@gmail.com).
 
 
 
