@@ -5,8 +5,8 @@ We proposed **PROSPER**, a new multi-ancestry PRS method with penalized regressi
 
 ## Recent Version History
 
-**Sept 8, 2024**: Added a repository titled 'create_your_own_LD' that contains code for generating a user-specific LD reference panel.
-**Sept 8, 2024**: Fix some bugs.
+**Sept 9, 2024**: Added a repository titled 'create_your_own_LD' that contains code for generating a user-specific LD reference panel.    
+**Sept 8, 2024**: Fix some bugs.    
 **Jan 14, 2024**: Upload AFR, EAS, and SAS LD reference constructed by UKB.    
 **Sept 18, 2023**: Update citation biorxiv version.    
 **Sept 11, 2023**: Upload EUR LD reference constructed by UKB.    
