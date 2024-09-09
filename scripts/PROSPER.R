@@ -293,7 +293,7 @@ ff <- foreach(j = 1:length(allchrom), ii = icount(), .final = function(x) NULL) 
   N <- N0
 
   rm(list=c("summ_list1","snps_scale1","LD_list1","indx1","indx_block1","snp_list1","Nsnps1",
-            "Nsnps0","snps_list0","snps_scale0","summ_list0","N0","l","LD_list0","tmp"))
+            "Nsnps0","snps_list0","snps_scale0","summ_list0","l","LD_list0","tmp"))
 
   ############
   ## Step 2.3. Run algorithm
