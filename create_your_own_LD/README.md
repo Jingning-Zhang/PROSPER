@@ -2,7 +2,7 @@
 
 
 
-1. Please make sure the bfiles includes the same set of variants and the same ref alleles. Even if a variant is not common in a certain population, please also include it in the bfile to make sure the LD matrix can be matched together. And remove variants with duplicate IDs.
+1. Please make sure the bfiles include the same set of variants and the same ref alleles. Even if a variant is not common in a certain population, please also include it in the bfiles to make sure the LD matrix can be matched together. And remove variants with duplicate IDs.
 
 These could be done using plink commands
 
@@ -13,7 +13,7 @@ These could be done using plink commands
 
 Put those bfiles (by chromosomes 1-22) inside the directory ${dir_for_refgeno_bfile}/${ancestry}/, and named them with ref_chr${chr}.bed, ref_chr${chr}.bim, ref_chr${chr}.fam.
 
-2. Please put plink1 (executable file), plink2 (executable file), Berisa.EUR.hg19.bed and Berisa.EUR.hg38.bed inside the directory ${dir_for_plink12_and_ldblock}.
+2. Please put plink1 (executable file), plink2 (executable file), Berisa.EUR.hg19.bed and Berisa.EUR.hg38.bed (these two can be downloaded in this repo) inside the directory ${dir_for_plink12_and_ldblock}.
 
 3. Please put the two scripts (1_compute_LD_by_chr.R and 2_reformat_to_RData_by_chr.R) inside the directory ${dir_for_scripts}.
 
@@ -43,7 +43,7 @@ Rscript ./2_reformat_to_RData_by_chr.R \
 
 ```
 
-6. After finish running it for all chromosomes and ancestries, please copy them to the final repo ${dir_for_LD_results}.
+6. After finishing running it for all chromosomes and ancestries, please copy them to the final repo ${dir_for_LD_results}.
 
 ```
 mkdir ${dir_for_LD_results}/${ancestry}
@@ -53,7 +53,7 @@ for (( i = 1; i < 23; i++ )); do
 done
 ```
 
-7. Run the R codes for generating a reference text file for all variants and alleles.
+7. Run the R codes to generate a reference text file for all variants and alleles.
 
 ```
 library(bigreadr)
