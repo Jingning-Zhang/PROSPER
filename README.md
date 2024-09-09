@@ -268,5 +268,5 @@ Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ances
 
 ## Acknowledgment
 
-I would like to acknowledge Dr. Jacob Williams, Dr. Haoyu Zhang, Ritwiz Kamal, Dr. Manikandan Narayanan for their valuable assistance in identifying bugs and helping to correct the code.
+I would like to acknowledge Corinna Thoben, Dr. Jacob Williams, Dr. Haoyu Zhang, Ritwiz Kamal, Dr. Manikandan Narayanan for their valuable assistance in identifying bugs and helping to correct the code.
 
