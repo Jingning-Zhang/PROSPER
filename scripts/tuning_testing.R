@@ -207,7 +207,7 @@ if(opt$linear_score){
 
   # read coefficients of all candidate PRS models (row: variants; column: PRS models)
   score <- fread2(paste0(opt$PATH_out,"/before_ensemble/score_file.txt"), sep="\t", nThread=NCORES)
-  if(length(score_drop)>0){ score <- score[,-score_drop,drop=F] }
+  if(length(score_drop)>0){ score <- score[,-(score_drop+3),drop=F] }
 
   # Get weights of all scores (wi) by predicting on an identity matrix
   tmp <- rbind(rep(0,ncol(SCORE)), diag(ncol(SCORE)))
