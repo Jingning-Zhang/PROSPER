@@ -90,7 +90,11 @@ for(ancestry in c("AFR","AMR","EAS","EUR","SAS")){
   res <- rbind(res,dat)
   res <- unique(res)
 }
-a = table(res$V2); max(a) ## Used to check if there is any duplicate variants. If so, please check your bfile and match the alleles.
+
+## Used to check if there is any duplicate variants.
+## If max(a) is bigger than 1, meaning there are duplicate variants, please check your bfile and match the alleles.
+a = table(res$V2); max(a)
+
 fwrite2(res, paste0(dir_for_LD_results,"/ref_bim.txt"), col.names = F, sep="\t", nThread=1)
 
 ```
