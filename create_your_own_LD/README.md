@@ -2,7 +2,7 @@
 
 
 
-1. Please make sure the bfiles include the same set of variants and the same ref alleles. Even if a variant is not common in a certain population, please also include it in the bfiles to make sure the LD matrix can be matched together. And remove variants with duplicate IDs.
+1. Please make sure the bfiles include the same set of variants and the same ref alleles. Even if a variant is not common in a certain population, please also include it in the bfiles to ensure the LD matrix can be matched together. And remove variants with duplicate IDs.
 
 These could be done using plink commands
 
@@ -91,15 +91,15 @@ for(ancestry in c("AFR","AMR","EAS","EUR","SAS")){
   res <- unique(res)
 }
 
-## Used to check if there is any duplicate variants.
-## If max(a) is bigger than 1, meaning there are duplicate variants, please check your bfile and match the alleles.
+## Used to check if there are any duplicate variants.
+## If max(a) is bigger than 1, meaning there are duplicate variants, please check your bfiles and match the alleles.
 a = table(res$V2); max(a)
 
 fwrite2(res, paste0(dir_for_LD_results,"/ref_bim.txt"), col.names = F, sep="\t", nThread=1)
 
 ```
 
-8. The LD panel in ${dir_for_LD_results} is now ready to use for PROSPER.
+8. Your LD panel in ${dir_for_LD_results} is now ready to use for PROSPER.
 
 
 
