@@ -116,6 +116,7 @@ if ( !is.na(opt$pheno_tuning) ) {
 }else {
   pheno <- fam[,c(1,2,6)]
 }
+pheno[,3] = as.numeric(pheno[,3])
 m <- is.na(pheno[,3]) # Remove samples with missing phenotype
 fam <- fam[!m,,drop=F]
 pheno <- pheno[!m,,drop=F]
