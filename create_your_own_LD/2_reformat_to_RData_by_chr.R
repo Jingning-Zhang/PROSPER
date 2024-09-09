@@ -42,7 +42,7 @@ Nsnps <- integer(length = nrow(block_info_tmp)+2)
 snps_list <- vector("list", length = nrow(block_info_tmp)+2)
 LD_list <- vector("list", length = nrow(block_info_tmp)+2)
 
-#### start
+#### Start of a chromosome
 
 snps <- character()
 tmp.snps <- try(read.table(paste0(opt$workdir, "/tmp/byblock/", chr,"/",
@@ -75,7 +75,7 @@ if ('try-error' %in% class(tmp.snps)) {
 }
 
 
-#### Middle
+#### Middle of a chromosome
 
 for (i in 1:nrow(block_info_tmp)){
   snps <- character()
@@ -112,7 +112,7 @@ for (i in 1:nrow(block_info_tmp)){
 }
 #warnings()
 
-#### end
+#### End of a chromosome
 
 snps <- character()
 tmp.snps <- try(read.table(paste0(opt$workdir, "/tmp/byblock/", chr,"/",
