@@ -11,19 +11,20 @@ These could be done using plink commands
 --rm-dup exclude-mismatch
 ```
 
-Put those bfiles inside ${dir_for_refgeno_bfile}/${ancestry}, and named them with ref_chr${chr}.bed, ref_chr${chr}.bim, ref_chr${chr}.fam.
+Put those bfiles (by chromosomes 1-22) inside the directory ${dir_for_refgeno_bfile}/${ancestry}/, and named them with ref_chr${chr}.bed, ref_chr${chr}.bim, ref_chr${chr}.fam.
 
-2. Please put plink1 (executable file), plink2 (executable file), Berisa.EUR.hg19.bed and Berisa.EUR.hg38.bed inside ${dir_for_plink12_and_ldblock}.
+2. Please put plink1 (executable file), plink2 (executable file), Berisa.EUR.hg19.bed and Berisa.EUR.hg38.bed inside the directory ${dir_for_plink12_and_ldblock}.
 
-3. Please put the two scripts (1_compute_LD_by_chr.R and 2_reformat_to_RData_by_chr.R) inside ${dir_for_scripts}.
+3. Please put the two scripts (1_compute_LD_by_chr.R and 2_reformat_to_RData_by_chr.R) inside the directory ${dir_for_scripts}.
 
-4. Please create two repo: ${dir_for_LD_results_temp} and ${dir_for_LD_results}.
+4. Please create two repo: ${dir_for_LD_results_temp} and ${dir_for_LD_results}. The first is a temporary repo to generate temporary LD files, and the second one is the final repo that will be used to store your own LD reference panel.
 
-5. Codes used to generate temp LD files inside ${dir_for_LD_results_temp}:
+5. Codes used to generate temporary LD files inside ${dir_for_LD_results_temp}:
 
 ```
 cd ${dir_for_scripts}
 
+mkdir ${dir_for_LD_results_temp}/
 mkdir ${dir_for_LD_results_temp}/${ancestry}/
 
 Rscript ./1_compute_LD_by_chr.R \
@@ -52,10 +53,14 @@ for (( i = 1; i < 23; i++ )); do
 done
 ```
 
-7. Run the R codes for generating a reference file for variants and alleles.
+7. Run the R codes for generating a reference text file for all variants and alleles.
 
 ```
 library(bigreadr)
+
+dir_for_LD_results = "PUT YOUR dir_for_LD_results HERE."
+dir_for_LD_results_temp = "PUT YOUR dir_for_LD_results_temp HERE."
+dir_for_refgeno_bfile = "PUT YOUR dir_for_refgeno_bfile HERE."
 
 for(ancestry in c("AFR","AMR","EAS","EUR","SAS")){
 
@@ -90,7 +95,7 @@ fwrite2(res, paste0(dir_for_LD_results,"/ref_bim.txt"), col.names = F, sep="\t",
 
 ```
 
-8. The LD panel in ${dir_for_LD_results} is now ready to use.
+8. The LD panel in ${dir_for_LD_results} is now ready to use for PROSPER.
 
 
 
