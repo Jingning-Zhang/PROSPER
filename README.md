@@ -266,7 +266,7 @@ Please direct any problems or questions to Jingning Zhang (jingningzhang238@gmai
 
 ## Citation
 
-Zhang, Jingning, et al. "An Ensemble Penalized Regression Method for Multi-ancestry Polygenic Risk Prediction" Biorxiv (2023). (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10055041/)
+Zhang, Jingning, et al. "An ensemble penalized regression method for multi-ancestry polygenic risk prediction." Nature Communications 15.1 (2024): 3238.
 
 ## Acknowledgment
 
