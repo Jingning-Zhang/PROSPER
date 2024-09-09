@@ -53,7 +53,7 @@ for (( i = 1; i < 23; i++ )); do
 done
 ```
 
-7. Run the R codes to generate a reference text file for all variants and alleles.
+7. Run the R codes to generate ref_bim.txt（a reference text file for all variants and alleles）.
 
 ```
 library(bigreadr)
