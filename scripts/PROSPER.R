@@ -309,13 +309,17 @@ ff <- foreach(j = 1:length(allchrom), ii = icount(), .final = function(x) NULL) 
   ############
   ## Step 2.4. Clean PRSs into a matrix (#variant X #grid_search)
 
-  for (i in 1:Ngridsearch){
-    for (bl in 1:nblock){
-      tmp1 <- res$b[[i]][[bl]]
-      tmp2 <- snps_scale[[bl]]; tmp2[is.na(tmp2)] <- 0
-      if(bl==1){ b_tmp <- tmp1 * tmp2 }else{ b_tmp <- rbind(b_tmp, tmp1 * tmp2) }
+  prs <- NULL
+  for(i in 1:Ngridsearch){
+    b_tmp <- NULL
+    for(bl in 1:nblock){
+      tmp1 <- res$b[[i]][[bl]]; tmp2 <- snps_scale[[bl]]
+      if(is.null(tmp1) || is.null(tmp2)){ next }
+      tmp2[is.na(tmp2)] <- 0
+      if(is.null(b_tmp)){ b_tmp <- tmp1 * tmp2 }else{ b_tmp <- rbind(b_tmp, tmp1 * tmp2)}
     }
-    if(i==1){ prs <- b_tmp }else{ prs <- cbind(prs, b_tmp) }
+    if(is.null(b_tmp)){ next }
+    if(is.null(prs)){ prs <- b_tmp }else{ prs <- cbind(prs, b_tmp)}
   }
   prs[is.na(prs)] <- 0; prs[prs > 10] <- 0; prs[prs < -10] <- 0
   rm(list=c("tmp1","tmp2","b_tmp"))
