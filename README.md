@@ -43,9 +43,7 @@ Nov 24, 2022: Repository made public.
           
      The above LD reference panels were constructed using the 1000 Genomes Project phase 3 samples for variants in either Hapmap3 or MEGA. To create your own LD reference panels, please contact Jingning Zhang (jingningzhang238@gmail.com) for codes.
   
-     **New update: We constructed the EUR reference using ~337K unrelated UKB white samples.**
-  
-     **New update: We constructed the AFR (~3K), EAS (~0.6K), SAS (~1.8K) reference using unrelated UKB samples from the corresponding genetic ancestry.**
+     **New update: We constructed the EUR(~337K), AFR (~3K), EAS (~0.6K), SAS (~1.8K) reference using unrelated UKB samples from the corresponding genetic ancestry.**
         
      [EUR reference constructed using UKB]( https://drive.google.com/file/d/13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K/view?usp=sharing "EUR reference") (~12.5G); Google Drive <file_id>: `13CFSAN3unf48Z9JnzdAzyJKoF4csjb7K`; decompress by `tar -zxvf EUR_ukb.tar.gz`
 
