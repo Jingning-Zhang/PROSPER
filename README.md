@@ -153,13 +153,13 @@ The optimal parameters can be obtained by running the official [lassosum2]( http
 
  - **covar_tuning**  (optional): Full path to quantitative covariates for tuning (PLINK format).
 
- - **testing** (optional): Whether to perform testing in a seperate dataset. If TRUE, tuning datasets should be provided (bfile_testing, pheno_testing, covar_testing). Default is FALSE.
+ - **testing** (optional): Whether to perform testing in a seperate dataset. If TRUE, testing datasets should be provided (bfile_testing, pheno_testing, covar_testing). Default is FALSE.
 
- - **bfile_tuning** (optional): Should be provided if `testing=TRUE`. Full path to PLINK binary input file prefix (minus bed/bim/fam) for testing.
+ - **bfile_testing** (optional): Should be provided if `testing=TRUE`. Full path to PLINK binary input file prefix (minus bed/bim/fam) for testing.
 
- - **pheno_tuning** (optional): Should be provided if `testing=TRUE`. Full path to phenotype file for testing (PLINK format). This is optional, taken from `bfile_tuning` otherwise.
+ - **pheno_testing** (optional): Should be provided if `testing=TRUE`. Full path to phenotype file for testing (PLINK format). This is optional, taken from `bfile_testing` otherwise.
 
- - **covar_tuning**  (optional): Should be provided if `testing=TRUE`. Full path to quantitative covariates for testing (PLINK format).
+ - **covar_testing**  (optional): Should be provided if `testing=TRUE`. Full path to quantitative covariates for testing (PLINK format).
 
  - **SL_library** (optional): Models input to SL.library in SuperLearner function, separated by comma. Default is "SL.glmnet,SL.ridge,SL.lm".
 
