@@ -3,10 +3,14 @@
 We proposed **PROSPER**, a new multi-ancestry PRS method with penalized regression followed by ensemble learning. This software is a command line tool based on R programming language. Large-scale benchmarking study shows that PROSPER could be the leading method to reduce the disparity of PRS performance across ancestry groups. 
 
 
+## Anouncement 
+
+Some user have reported failures when using multiple threads in the foreach loop (lines 186 and 361 of PROSPER.R; and lines 206 and 312 of lassosum2.R). If you’re experiencing this issue, switch to a regular loop, or run each chromosome separately. 
+
 ## Recent Version History
 
-**May 7, 2025**: **Fix some bugs. Changes include: PROSPER.R line 312-320.**     
-**Sept 9, 2024**: **Added a repository titled 'create_your_own_LD' that contains code for generating a user-specific LD reference panel.**    
+May 7, 2025: Fix some bugs. Changes include: PROSPER.R line 312-320.     
+Sept 9, 2024: Added a repository titled 'create_your_own_LD' that contains code for generating a user-specific LD reference panel.    
 Sept 8, 2024: Fix some bugs. Changes include: tuning_testing.R line 119 and line 211. PROSPER.R line 296.    
 Jan 14, 2024: Upload AFR, EAS, and SAS LD reference constructed by UKB.    
 Sept 18, 2023: Update citation biorxiv version.    
